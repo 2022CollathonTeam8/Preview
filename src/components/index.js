@@ -1,2 +1,2 @@
-import TBUtton from "./TButton";
-export { TBUtton };
+import TButton from "./TButton";
+export { TButton };

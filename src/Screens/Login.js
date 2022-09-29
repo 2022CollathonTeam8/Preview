@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import { Input } from "react-native-elements";
-import TButton from "../components";
+import TButton from "../components/TButton";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const __login = () => {};
 
   return (
     <View style={S.container}>
@@ -27,7 +25,8 @@ const Login = ({ navigation }) => {
         secureTextEntry
       />
 
-      <TButton title="로그인" style={S.button} func={__login} />
+      <TButton title="sign in" func={() => Alert.alert("로그인")} />
+      <TButton title="회원가입" func={() => Alert.alert("회원가입")} />
     </View>
   );
 };
@@ -37,10 +36,6 @@ const S = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     padding: 10,
-  },
-  button: {
-    width: 200,
-    marginTop: 10,
   },
 });
 

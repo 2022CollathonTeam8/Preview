@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import { Input } from "react-native-elements";
-import TButton from "../components";
+import { TButton } from "../components";
 const Signup = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [imageURL, setImageUrl] = useState("");
   const [password, setPassword] = useState("");
-
-  const register = () => {};
 
   return (
     <View style={S.container}>
@@ -58,10 +56,6 @@ const S = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     padding: 10,
-  },
-  button: {
-    width: 200,
-    marginTop: 10,
   },
 });
 

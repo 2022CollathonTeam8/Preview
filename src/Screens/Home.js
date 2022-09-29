@@ -8,7 +8,7 @@ import {
   Alert,
 } from "react-native";
 
-import { TBUtton } from "../components";
+import { TButton } from "../components";
 
 const Home = ({ navigation }) => {
   return (
@@ -17,8 +17,8 @@ const Home = ({ navigation }) => {
         <Text style={ST.tt}>로고위치</Text>
       </View>
       <View style={{ marginVertical: 10 }}></View>
-      <TBUtton title="로그인" func={() => navigation.navigate("Login")} />
-      <TBUtton title="회원가입" func={() => navigation.navigate("Signup")} />
+      <TButton title="로그인" func={() => navigation.navigate("Login")} />
+      <TButton title="회원가입" func={() => navigation.navigate("Signup")} />
     </SafeAreaView>
   );
 };

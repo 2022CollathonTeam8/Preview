@@ -3,12 +3,19 @@ import { NavigationContainer } from "@react-navigation/native";
 import AuthStack from "./AuthStack";
 import MainStack from "./MainStack";
 
-const Navigation = () => {
+// const Nav = () => {
+//   return (
+//     <NavigationContainer>
+//       <AuthStack />
+//     </NavigationContainer>
+//   );
+// };
+// export default Nav;
+
+export function Navigation() {
   return (
     <NavigationContainer>
-      {/* {user.loginstate ? <MainStack /> : <AuthStack />} */}
       <AuthStack />
     </NavigationContainer>
   );
-};
-export default Navigation;
+}
