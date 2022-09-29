@@ -38,7 +38,13 @@ const Login = ({ navigation }) => {
           FtestLogin();
         }}
       />
-      <TButton title="회원가입" func={() => Alert.alert("회원가입")} />
+      <TButton
+        title="회원가입"
+        func={() => {
+          Alert.alert("회원가입");
+          navigation.navigate("Signup");
+        }}
+      />
     </View>
   );
 };

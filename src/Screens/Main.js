@@ -23,7 +23,6 @@ const Main = ({ navigation }) => {
         <TButton
           title="분실자에요"
           func={() => {
-            Alert.alert("분실");
             navigation.navigate("List");
           }}
         />
