@@ -1,2 +1,3 @@
 import TButton from "./TButton";
-export { TButton };
+import TData from "./TData";
+export { TButton, TData };

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import { Input } from "react-native-elements";
-import TButton from "../components/TButton";
+import { TButton } from "../components";
 import { UserContext } from "../Contexts/User";
 
 const Login = ({ navigation }) => {
