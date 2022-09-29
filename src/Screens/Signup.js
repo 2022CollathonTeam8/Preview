@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import { Input } from "react-native-elements";
 import { TButton } from "../components";
+import { UserContext } from "../Contexts/User";
+
 const Signup = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [imageURL, setImageUrl] = useState("");
   const [password, setPassword] = useState("");
-
+  const { dispatch } = useContext(UserContext);
+  const FtestLogin = () => {
+    dispatch(true);
+  };
   return (
     <View style={S.container}>
       <Input
@@ -44,7 +49,7 @@ const Signup = ({ navigation }) => {
         style={S.button}
         func={() => {
           Alert.alert("완료");
-          setTimeout(() => navigation.navigate("Home"), 1000);
+          setTimeout(() => FtestLogin(), 1000);
         }}
       />
     </View>
