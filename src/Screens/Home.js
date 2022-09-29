@@ -17,21 +17,20 @@ const Home = ({ navigation }) => {
         <Text style={ST.tt}>로고위치</Text>
       </View>
       <View style={{ marginVertical: 10 }}></View>
-      <TBUtton title="로그인" func={() => Alert.alert("로그인버튼")} />
-      <TBUtton title="회원가입" func={() => Alert.alert("회원가입버튼")} />
+      <TBUtton title="로그인" func={() => navigation.navigate("Login")} />
+      <TBUtton title="회원가입" func={() => navigation.navigate("Signup")} />
     </SafeAreaView>
   );
 };
 
 const ST = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
   },
   logo: {
+    flex: 1,
     backgroundColor: "blue",
     color: "white",
-    width: 300,
-    height: 300,
     justifyContent: "center",
     alignItems: "center",
   },
