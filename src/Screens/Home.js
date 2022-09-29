@@ -8,7 +8,7 @@ import {
   Alert,
 } from "react-native";
 
-import { TBUtton } from "../../components";
+import { TBUtton } from "../components";
 
 const Home = ({ navigation }) => {
   return (

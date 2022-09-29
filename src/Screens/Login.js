@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { View, Text, StyleSheet, Alert } from "react-native";
 import { Input } from "react-native-elements";
-import TButton from "../../components/TButton";
+import TButton from "../components";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const SignIn = () => {};
+  const __login = () => {};
 
   return (
     <View style={S.container}>
@@ -27,7 +27,7 @@ const Login = ({ navigation }) => {
         secureTextEntry
       />
 
-      <TButton title="sign in" style={S.button} func={SignIn} />
+      <TButton title="로그인" style={S.button} func={__login} />
     </View>
   );
 };
