@@ -8,4 +8,8 @@ import Main from "./Main";
 import ListScreen from "./ListScreen";
 import UpLoadScreen from "./UpLoadScreen";
 
-export { Login, Home, Signup, Main, ListScreen, UpLoadScreen };
+//
+
+import AboutItem from "./AboutItem";
+
+export { Login, Home, Signup, Main, ListScreen, UpLoadScreen, AboutItem };

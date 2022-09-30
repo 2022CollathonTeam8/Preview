@@ -17,7 +17,7 @@ const Main = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.row}>
         <TButton
           title="습득자에요"
@@ -40,7 +40,7 @@ const Main = ({ navigation }) => {
           FtestLogin();
         }}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

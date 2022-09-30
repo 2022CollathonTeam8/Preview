@@ -11,28 +11,29 @@ import { TData } from "../components";
 
 const ListScreen = ({ navigation }) => {
   return (
-    <SafeAreaView>
+    <View>
       <ScrollView>
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
-        <TData />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
+        <TData onPress={() => navigation.navigate("AboutItem")} />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
