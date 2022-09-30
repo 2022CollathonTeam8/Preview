@@ -9,6 +9,8 @@ import {
   Alert,
   Button,
   ScrollView,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 
 import { Input } from "react-native-elements";
@@ -38,54 +40,67 @@ const UpLoadScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.imagepickercontainer}>
-        <TouchableOpacity
-          style={styles.imagebox}
-          onPress={() => Alert.alert("물건사진")}
-        >
-          <Text>물건사진</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.textinputcontainer}>
-        <Input placeholder="xxxx" label="제품명" />
-
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-around",
-            marginBottom: 10,
-          }}
-        >
-          <Text>습득위치</Text>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
+      >
+        <View style={styles.imagepickercontainer}>
           <TouchableOpacity
-            style={styles.BTN}
-            onPress={() => Alert.alert("카테고리")}
+            style={styles.imagebox}
+            onPress={() => Alert.alert("물건사진")}
           >
-            <Text>카테고리</Text>
+            <Text>물건사진</Text>
           </TouchableOpacity>
         </View>
-
-        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-          <Text>물건분류</Text>
-          <TouchableOpacity
-            style={styles.BTN}
-            onPress={() => Alert.alert("카테고리")}
-          >
-            <Text>카테고리</Text>
-          </TouchableOpacity>
-        </View>
-
-        <Input placeholder="20xx.xx.xx" label="날짜" />
-
-        <Input placeholder="00동 00" label="세부 장소" />
-
         <ScrollView>
-          <TodoInsert onAddTodo={addTodo} />
-          <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
-        </ScrollView>
-      </View>
+          <View style={styles.textinputcontainer}>
+            <Input placeholder="xxxx" label="제품명" />
 
-      <Button title="등록하기" onPress={() => navigation.navigate("List")} />
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-around",
+                marginBottom: 10,
+              }}
+            >
+              <Text>습득위치</Text>
+              <TouchableOpacity
+                style={styles.BTN}
+                onPress={() => Alert.alert("카테고리")}
+              >
+                <Text>카테고리</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-around" }}
+            >
+              <Text>물건분류</Text>
+              <TouchableOpacity
+                style={styles.BTN}
+                onPress={() => Alert.alert("카테고리")}
+              >
+                <Text>카테고리</Text>
+              </TouchableOpacity>
+            </View>
+
+            <Input placeholder="20xx.xx.xx" label="날짜" />
+
+            <Input placeholder="00동 00" label="세부 장소" />
+
+            <TodoInsert onAddTodo={addTodo} />
+            <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
+          </View>
+
+          <Button
+            title="등록하기"
+            onPress={() => {
+              Alert.alert("등록");
+              navigation.popToTop();
+            }}
+          />
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
