@@ -6,4 +6,6 @@ import Signup from "./Signup";
 
 import Main from "./Main";
 import ListScreen from "./ListScreen";
-export { Login, Home, Signup, Main, ListScreen };
+import UpLoadScreen from "./UpLoadScreen";
+
+export { Login, Home, Signup, Main, ListScreen, UpLoadScreen };

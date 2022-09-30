@@ -19,7 +19,13 @@ const Main = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.row}>
-        <TButton title="습득자에요" func={() => Alert.alert("습득")} />
+        <TButton
+          title="습득자에요"
+          func={() => {
+            Alert.alert("습득");
+            navigation.navigate("UpLoad");
+          }}
+        />
         <TButton
           title="분실자에요"
           func={() => {
