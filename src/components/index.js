@@ -3,4 +3,5 @@ import TData from "./TData";
 import TodoInsert from "./TodoInsert";
 import TodoListItem from "./TodoListItem";
 import TodoList from "./TodoList";
-export { TButton, TData, TodoInsert, TodoListItem, TodoList };
+import Banner from "./Banner";
+export { TButton, TData, TodoInsert, TodoListItem, TodoList, Banner };
