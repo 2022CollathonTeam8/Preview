@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import AuthStack from "./AuthStack";
-import MainStack from "./MainStack";
+import BottomTabNav from "./MainStack";
 import { UserContext } from "../Contexts/User";
 import { SafeAreaView } from "react-native";
 export function Navigation() {
@@ -9,7 +9,7 @@ export function Navigation() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
-        {goMain ? <MainStack /> : <AuthStack />}
+        {goMain ? <BottomTabNav /> : <AuthStack />}
       </NavigationContainer>
     </SafeAreaView>
   );

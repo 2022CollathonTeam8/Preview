@@ -7,6 +7,7 @@ const Banner = () => {
     "https://source.unsplash.com/1024x768/?nature",
     "https://source.unsplash.com/1024x768/?water",
     "https://source.unsplash.com/1024x768/?tree",
+    "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
   ]);
 
   const [state, setState] = useState(1);
@@ -17,7 +18,9 @@ const Banner = () => {
           autoplay
           circleLoop
           sliderBoxHeight={150}
-          resizeMode="cover" // 이미지 사이즈 조절값
+          resizeMethod={"resize"}
+          resizeMode="stretch" // 이미지 사이즈 조절값
+          //   cover , contain, stretch, repeat, center
           images={images} // 이미지 주소 리스트
           dotColor="rgba(0,0,0,0)" // 아래 점 투명으로 안보이게 가림
           inactiveDotColor="rgba(0,0,0,0)"
