@@ -36,6 +36,7 @@ const Login = ({ navigation }) => {
         func={() => {
           Alert.alert("로그인");
           FtestLogin();
+          navigation.navigate("Main");
         }}
       />
       <TButton

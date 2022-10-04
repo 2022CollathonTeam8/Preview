@@ -25,11 +25,10 @@ const BottomTabNav = () => {
       initialRouteName="Main"
       screenOptions={{ headerShown: false }}
     >
-      <BottomTab.Screen name="Cache" component={Cache} />
+      <BottomTab.Screen name="Cache" component={UpLoadScreen} />
       <BottomTab.Screen name="ChatRoom" component={ChatRoom} />
       <BottomTab.Screen name="Main" component={MainStack} />
-
-      <BottomTab.Screen name="Profile" component={Profile} />
+      <BottomTab.Screen name="Profile" component={LoginStack} />
       <BottomTab.Screen name="Setting" component={Setting} />
     </BottomTab.Navigator>
   );
@@ -40,7 +39,18 @@ const MainStack = () => {
       <Stack.Screen name="Home" component={Main2} />
       <Stack.Screen name="List" component={ListScreen} />
       {/* <Stack.Screen name="UpLoad" component={UpLoadScreen} /> */}
+      {/* <Stack.Screen name="Login" component={Login} /> */}
+      {/* <Stack.Screen name="Signup" component={Signup} /> */}
       <Stack.Screen name="AboutItem" component={AboutItem} />
+    </Stack.Navigator>
+  );
+};
+
+const LoginStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Signup" component={Signup} />
     </Stack.Navigator>
   );
 };

@@ -9,7 +9,8 @@ export function Navigation() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
-        {goMain ? <BottomTabNav /> : <AuthStack />}
+        {/* {goMain ? <BottomTabNav /> : <AuthStack />} */}
+        <BottomTabNav />
       </NavigationContainer>
     </SafeAreaView>
   );
