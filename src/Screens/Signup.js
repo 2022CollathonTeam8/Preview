@@ -50,6 +50,7 @@ const Signup = ({ navigation }) => {
         func={() => {
           Alert.alert("완료");
           setTimeout(() => FtestLogin(), 1000);
+          setTimeout(() => navigation.navigate("Home"), 1000);
         }}
       />
     </View>

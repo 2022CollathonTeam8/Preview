@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -15,6 +15,7 @@ import {
   Profile,
   Setting,
 } from "../Screens";
+import { UserContext } from "../Contexts/User";
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -22,22 +23,24 @@ const BottomTab = createBottomTabNavigator();
 const BottomTabNav = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName="Main"
+      initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
       <BottomTab.Screen name="Cache" component={UpLoadScreen} />
       <BottomTab.Screen name="ChatRoom" component={ChatRoom} />
-      <BottomTab.Screen name="Main" component={MainStack} />
+      <BottomTab.Screen name="Home" component={HomeStack} />
       <BottomTab.Screen name="Profile" component={LoginStack} />
       <BottomTab.Screen name="Setting" component={Setting} />
     </BottomTab.Navigator>
   );
 };
-const MainStack = () => {
+const HomeStack = () => {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Main2} />
+    <Stack.Navigator initialRouteName="Main2">
+      <Stack.Screen name="Main2" component={Main2} />
+      {/* 나중에 삭제할 스크린 */}
       <Stack.Screen name="List" component={ListScreen} />
+
       {/* <Stack.Screen name="UpLoad" component={UpLoadScreen} /> */}
       {/* <Stack.Screen name="Login" component={Login} /> */}
       {/* <Stack.Screen name="Signup" component={Signup} /> */}
@@ -47,10 +50,17 @@ const MainStack = () => {
 };
 
 const LoginStack = () => {
+  const { goMain } = useContext(UserContext);
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Signup" component={Signup} />
+      {goMain ? (
+        <Stack.Screen name="AfeterLogin" component={Profile} />
+      ) : (
+        <>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Signup" component={Signup} />
+        </>
+      )}
     </Stack.Navigator>
   );
 };

@@ -35,15 +35,15 @@ const Login = ({ navigation }) => {
         title="로그인"
         func={() => {
           Alert.alert("로그인");
-          FtestLogin();
-          navigation.navigate("Main");
+          setTimeout(() => FtestLogin(), 1000);
+          setTimeout(() => navigation.navigate("Home"), 1000);
         }}
       />
       <TButton
         title="회원가입"
         func={() => {
           Alert.alert("회원가입");
-          navigation.navigate("Signup");
+          setTimeout(() => navigation.navigate("Signup"), 1000);
         }}
       />
     </View>

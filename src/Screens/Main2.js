@@ -28,7 +28,7 @@ const Main2 = ({ navigation }) => {
       <View style={styles.row}>
         <Button title="게시판" onPress={() => setIsRank(false)} />
         <Button title="랭킹" onPress={() => setIsRank(true)} />
-        <Button title="로그아웃" onPress={FtestLogOut} />
+        <Button title="로그아웃 임시용" onPress={FtestLogOut} />
       </View>
       <View style={{ borderBottomColor: "grey", borderWidth: 2 }}></View>
       {!isRank ? (
@@ -41,7 +41,9 @@ const Main2 = ({ navigation }) => {
             <TData
               onPress={() => {
                 Alert.alert("로그인하세요");
-                navigation.navigate("Profile");
+                setTimeout(() => {
+                  navigation.navigate("Profile");
+                }, 1000);
               }}
             />
           )}
